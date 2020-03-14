@@ -1,2 +1,2 @@
-# converter-api
-API for consume anything service dedicate to conversion
+# conversor-api
+Api de consumo de serviços de conversão.
