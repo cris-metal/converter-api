@@ -4,9 +4,7 @@ import com.campos.conversor.Enum.CentenaPorExtensoEnum;
 import com.campos.conversor.Enum.DezenaPorExtensoEnum;
 import com.campos.conversor.Enum.MilharPorExtensoEnum;
 import com.campos.conversor.Enum.UnidadePorExtensoEnum;
-import com.campos.conversor.tools.PropriedadesApp;
 import com.campos.conversor.tools.Utilitarios;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,9 +12,6 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ConversorService {
-
-    @Autowired
-    private PropriedadesApp propriedadesApp;
 
     private final int MIL = 1000;
     private final int CEM = 100;
