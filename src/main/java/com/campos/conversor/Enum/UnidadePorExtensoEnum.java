@@ -3,7 +3,7 @@ package com.campos.conversor.Enum;
 /**
  * Created by cris on 15/03/2020.
  */
-public enum UnidadePorExtensoEnum implements PalavraPorExtensoInterface{
+public enum UnidadePorExtensoEnum {
     UM(1, "Um"),
     DOIS(2, "Dois"),
     TRES(3, "Três"),
@@ -30,16 +30,5 @@ public enum UnidadePorExtensoEnum implements PalavraPorExtensoInterface{
     UnidadePorExtensoEnum(int valor, String extenso) {
         this.extenso = extenso;
         this.valor = valor;
-    }
-
-    @Override
-    public String getPalavraPorExtenso(int valor) {
-        String valorExtenso = "";
-        for (UnidadePorExtensoEnum numeral : UnidadePorExtensoEnum.values()){
-            if (numeral.valor == valor){
-                valorExtenso = numeral.extenso;
-            }
-        }
-        return valorExtenso;
     }
 }

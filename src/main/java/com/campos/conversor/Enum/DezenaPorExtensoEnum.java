@@ -3,24 +3,21 @@ package com.campos.conversor.Enum;
 /**
  * Created by cris on 15/03/2020.
  */
-public enum DezenaPorExtensoEnum implements PalavraPorExtensoInterface{
-    VINTE("Vinte"),
-    TRINTA("Trinta"),
-    QUARENTA("Quarenta"),
-    CINQUENTA("Cinquenta"),
-    SESSENTA("Sessenta"),
-    SETENTA("Setenta"),
-    OITENTA("Oitenta"),
-    NOVENTA("Noventa");
+public enum DezenaPorExtensoEnum {
+    VINTE(20, "Vinte"),
+    TRINTA(30, "Trinta"),
+    QUARENTA(40, "Quarenta"),
+    CINQUENTA(50, "Cinquenta"),
+    SESSENTA(60, "Sessenta"),
+    SETENTA(70, "Setenta"),
+    OITENTA(80, "Oitenta"),
+    NOVENTA(90, "Noventa");
 
-    private final String extenso;
+    public final String extenso;
+    public final int valor;
 
-    DezenaPorExtensoEnum(String extenso) {
+    DezenaPorExtensoEnum(int valor, String extenso) {
         this.extenso = extenso;
-    }
-
-    @Override
-    public String getPalavraPorExtenso(int valor) {
-        return null;
+        this.valor = valor;
     }
 }

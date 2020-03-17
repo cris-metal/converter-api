@@ -1,5 +1,7 @@
 package com.campos.conversor.controller;
 
+import com.campos.conversor.service.ConversorService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConversorController {
 
+    @Autowired
+    private ConversorService conversorService;
+
     @RequestMapping(value = "/numeral/{numero}", method = RequestMethod.GET)
     public ResponseEntity<String> numeralExtenso(@PathVariable(value = "numero") int numero) {
-        return  new ResponseEntity<String>("teste", HttpStatus.OK);
+        return  new ResponseEntity<String>(conversorService.converteNumeralParaExtenso(numero), HttpStatus.OK);
     }}

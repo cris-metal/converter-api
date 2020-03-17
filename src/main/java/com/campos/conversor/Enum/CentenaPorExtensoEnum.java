@@ -3,26 +3,22 @@ package com.campos.conversor.Enum;
 /**
  * Created by cris on 15/03/2020.
  */
-public enum CentenaPorExtensoEnum implements PalavraPorExtensoInterface{
-    CEM("Cem"),
-    DUZENTOS("Duzentos"),
-    TREZENTOS("Trezentos"),
-    QUATROCENTOS("Quatrocentos"),
-    QUINHENTOS("Quinhentos"),
-    SEISCENTOS("Seiscentos"),
-    SETECENTOS("Setecentos"),
-    OITOCENTOS("Oitocentos"),
-    NOVECENTOS("Novecentos") {
-    };
+public enum CentenaPorExtensoEnum {
+    CEM(100, "Cem"),
+    DUZENTOS(200, "Duzentos"),
+    TREZENTOS(300, "Trezentos"),
+    QUATROCENTOS(400, "Quatrocentos"),
+    QUINHENTOS(500, "Quinhentos"),
+    SEISCENTOS(600, "Seiscentos"),
+    SETECENTOS(700, "Setecentos"),
+    OITOCENTOS(800, "Oitocentos"),
+    NOVECENTOS(900, "Novecentos");
 
-    private final String extenso;
+    public final String extenso;
+    public final int valor;
 
-    CentenaPorExtensoEnum(String extenso) {
+    CentenaPorExtensoEnum(int valor, String extenso) {
         this.extenso = extenso;
-    }
-
-    @Override
-    public String getPalavraPorExtenso(int valor) {
-        return null;
+        this.valor = valor;
     }
 }
