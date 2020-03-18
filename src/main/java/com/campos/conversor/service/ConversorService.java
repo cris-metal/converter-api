@@ -27,15 +27,11 @@ public class ConversorService {
                 return "Número fora da faixa";
 
             if (numeral >= this.MIL){
-
-            }else if (numeral >= this.CEM && numeral <= this.MIL){
-                return montaCentena(numeral);
-
-            }else if (numeral >= this.VINTE && numeral < this.CEM){
-                return montaDezena(numeral);
-            }else {
-                return montaUnidade(numeral);
+                return montaMilhar(numeral);
+            }else{
+                return getValor(numeral);
             }
+
 
         }catch (Exception e){
 
@@ -81,12 +77,21 @@ public class ConversorService {
 
     private String montaMilhar(int numeral){
         String valorExtenso = "";
-        for (MilharPorExtensoEnum milhar : MilharPorExtensoEnum.values()){
-            if (milhar.valor == numeral){
-                valorExtenso = milhar.extenso;
-                break;
-            }
+        if (MilharPorExtensoEnum.MIL.valor <= numeral){
+            int milha = Math.abs(numeral / 1000);
+            int centena = numeral % 1000;
+            valorExtenso = this.converteNumeralParaExtenso(milha) +" "+ MilharPorExtensoEnum.MIL.extenso + " " + this.getValor(centena);
         }
         return valorExtenso;
+    }
+    private String getValor(int numeral){
+        if (numeral >= this.CEM && numeral <= this.MIL){
+            return montaCentena(numeral);
+
+        }else if (numeral >= this.VINTE && numeral < this.CEM){
+            return montaDezena(numeral);
+        }else {
+            return montaUnidade(numeral);
+        }
     }
 }
