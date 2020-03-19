@@ -12,7 +12,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ConversorService {
-
+    private final int VALOR_MINIMO = -99999;
+    private final int VALOR_MAXIMO = 99999;
     private final int MIL = 1000;
     private final int CEM = 100;
     private final int VINTE = 20;
@@ -23,7 +24,7 @@ public class ConversorService {
      */
     public String converteNumeralParaExtenso(int numeral){
         try{
-            if (!Utilitarios.validaInteiroEntreLimites(numeral, Integer.parseInt("-99999"), Integer.parseInt("99999")))
+            if (!Utilitarios.validaInteiroEntreLimites(numeral, VALOR_MINIMO, VALOR_MAXIMO))
                 return "Número fora da faixa";
 
             if (numeral >= this.MIL){
