@@ -1,6 +1,7 @@
 package com.campos.conversor.controller;
 
 import com.campos.conversor.service.ConversorService;
+import net.minidev.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,12 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
+@RequestMapping("/api")
 public class ConversorController {
 
     @Autowired
     private ConversorService conversorService;
 
-    @RequestMapping(value = "/numeral/{numero}", method = RequestMethod.GET)
-    public ResponseEntity<String> numeralExtenso(@PathVariable(value = "numero") int numero) {
-        return  new ResponseEntity<String>(conversorService.converteNumeralParaExtenso(numero), HttpStatus.OK);
+    @RequestMapping(value = "/conversor-numeral/{numero}", method = RequestMethod.GET, produces = "application/json; charset=UTF-8")
+        public ResponseEntity<Object>  numeralExtenso(@PathVariable(value = "numero") int numero) {
+        JSONObject json = new JSONObject();
+        json.put("extenso", conversorService.converteNumeralParaExtenso(numero));
+        return new ResponseEntity<Object>(json, HttpStatus.OK);
     }}

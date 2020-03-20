@@ -4,25 +4,25 @@ package com.campos.conversor.Enum;
  * Created by cris on 15/03/2020.
  */
 public enum UnidadePorExtensoEnum {
-    UM(1, "Um"),
-    DOIS(2, "Dois"),
-    TRES(3, "Três"),
-    QUATRO(4, "Quatro"),
-    CINCO(5, "Cinco"),
-    SEIS(6, "Seis"),
-    SETE(7, "Sete"),
-    OITO(8, "Oito"),
-    NOVE(9, "Nove"),
-    DEZ(10, "Dez"),
-    ONZE(11, "Onze"),
-    DOZE(12, "Doze"),
-    TREZE(13, "Treze"),
-    QUATORZE(14, "Quatorze"),
-    QUINZE(15, "Quinze"),
-    DEZESSEIS(16, "Dezesseis"),
-    DEZESSETE(17, "Dezessete"),
-    DEZOITO(18, "Dezoito"),
-    DEZENOVE(19, "Dezenove");
+    UM(1, "um"),
+    DOIS(2, "dois"),
+    TRES(3, "três"),
+    QUATRO(4, "quatro"),
+    CINCO(5, "cinco"),
+    SEIS(6, "seis"),
+    SETE(7, "sete"),
+    OITO(8, "oito"),
+    NOVE(9, "nove"),
+    DEZ(10, "dez"),
+    ONZE(11, "onze"),
+    DOZE(12, "doze"),
+    TREZE(13, "treze"),
+    QUATORZE(14, "quatorze"),
+    QUINZE(15, "quinze"),
+    DEZESSEIS(16, "dezesseis"),
+    DEZESSETE(17, "dezessete"),
+    DEZOITO(18, "dezoito"),
+    DEZENOVE(19, "dezenove");
 
     public final String extenso;
     public final int valor;
