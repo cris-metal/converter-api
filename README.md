@@ -15,3 +15,7 @@ Subir Aplicação
 
 Testes - JUnit
     mvn test
+    
+EndPoint 
+    Executar a url 
+    Ex: Via Browser ou curl http://localhost:8080/api/conversor-numeral/0    

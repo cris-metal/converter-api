@@ -4,6 +4,7 @@ package com.campos.conversor.Enum;
  * Created by cris on 15/03/2020.
  */
 public enum UnidadePorExtensoEnum {
+    ZERO(0, "zero"),
     UM(1, "um"),
     DOIS(2, "dois"),
     TRES(3, "três"),

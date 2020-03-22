@@ -17,6 +17,7 @@ public class ConversorServiceTest {
 
 	@Test
 	public void montaUnidade(){
+		assertEquals(conversorService.converteNumeralParaExtenso(0), "zero");
 		assertEquals(conversorService.converteNumeralParaExtenso(15), "quinze");
 		assertNotEquals(conversorService.converteNumeralParaExtenso(15), "onze");
 		assertEquals(conversorService.converteNumeralParaExtenso(19), "dezenove");
