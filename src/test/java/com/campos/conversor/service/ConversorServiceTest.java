@@ -45,11 +45,11 @@ public class ConversorServiceTest {
 
 	@Test
 	public void montaMilhar(){
-		assertEquals(conversorService.converteNumeralParaExtenso(9207), "nove mil duzentos e sete");
+		assertEquals(conversorService.converteNumeralParaExtenso(9207), "nove mil e duzentos e sete");
 		assertEquals(conversorService.converteNumeralParaExtenso(9007), "nove mil e sete");
-		assertEquals(conversorService.converteNumeralParaExtenso(85291), "oitenta e cinco mil duzentos e noventa e um");
-		assertEquals(conversorService.converteNumeralParaExtenso(-85291), "menos oitenta e cinco mil duzentos e noventa e um");
-		assertEquals(conversorService.converteNumeralParaExtenso(99999), "noventa e nove mil novecentos e noventa e nove");
+		assertEquals(conversorService.converteNumeralParaExtenso(85291), "oitenta e cinco mil e duzentos e noventa e um");
+		assertEquals(conversorService.converteNumeralParaExtenso(-85291), "menos oitenta e cinco mil e duzentos e noventa e um");
+		assertEquals(conversorService.converteNumeralParaExtenso(99999), "noventa e nove mil e novecentos e noventa e nove");
 		assertEquals(conversorService.converteNumeralParaExtenso(4200), "quatro mil e duzentos");
 		assertNotEquals(conversorService.converteNumeralParaExtenso(95555), "doze");
 

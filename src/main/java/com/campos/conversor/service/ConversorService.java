@@ -104,13 +104,7 @@ public class ConversorService {
             int milha = Math.abs(numeral / 1000);
             int centena = numeral % 1000;
 
-            String e = " ";
-            if (centena == 0 || centena <= 100) {
-                e = (((centena / 100) * 100 - centena) == 0 ? " " : " e ");
-            }else if (centena == (Math.abs(centena / 100)*100)) {
-                e = " e ";
-            }
-            valorExtenso += (milha > 1 || milha < -1 ? this.converteNumeralParaExtenso(milha) : "") + " " + MilharPorExtensoEnum.MIL.extenso + e + this.montaValorExtenso(centena);
+            valorExtenso += (milha > 1 || milha < -1 ? this.converteNumeralParaExtenso(milha) : "") + " " + MilharPorExtensoEnum.MIL.extenso + " e " + this.montaValorExtenso(centena);
         }
         return valorExtenso;
     }
